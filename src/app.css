@@ -6,14 +6,14 @@ body {
     position: relative;
     background-color: var(--colorPageBackground);
     color: var(--colorText);
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Verdana';
     font-weight: 400;
     font-style: normal;
     height: 100%;
 }
 
 .color-normal, .severity0 {
-  color: var(--colorNormal);
+  color: var(--colorWhite);
 }
 
 .color-warning, .severity1 {
@@ -97,22 +97,25 @@ body > .container {
 }
 
 :root, .vizceral {
-  --colorText: rgb(214, 214, 214);
+  --colorText: rgb(70,107,176);
   --colorTextDisabled: rgb(129, 129, 129);
-  --colorNormal: rgb(186, 213, 237);
+  --colorNormal: rgb(70,107,176);
+  --colorWhite: rgb(255,255,255);
   --colorWarning: rgb(268, 185, 73);
   --colorDanger: rgb(184, 36, 36);
   --colorNormalDimmed: rgb(101, 117, 128);
-  --colorBackgroundDark: rgb(35, 35, 35);
-  --colorNormalDonut: rgb(91, 91, 91);
+  --colorBackgroundDark: rgb(70,107,176);
+  --colorNormalDonut: rgb(70,107,176);
+  --colorInactive: rgb(186, 213, 237);
   --colorLabelBorder: rgb(16, 17, 18);
   --colorLabelText: rgb(0, 0, 0);
-  --colorDonutInternalColor: rgb(35, 35, 35);
+  --colorDonutInternalColor: rgb(70,107,176);
   --colorDonutInternalColorHighlighted: rgb(255, 255, 255);
   --colorConnectionLine: rgb(91, 91, 91);
-  --colorPageBackground: rgb(45, 45, 45);
-  --colorPageBackgroundTransparent: rgba(45, 45, 45, 0);
+  --colorPageBackground: rgb(255, 255, 255);
+  --colorPageBackgroundTransparent: rgba(255, 255, 255, 0);
   --colorBorderLines: rgb(137, 137, 137);
+  --colorDetailsPanel: rgb(70,107,176);
 }
 
 /* Subheader
@@ -153,7 +156,7 @@ body > .container {
   content: attr(data-step);
   display: block;
   margin: 0 auto;
-  background: var(--colorNormalDonut);
+  background: var(--colorInactive);
   width: 1.3em;
   height: 1.3em;
   text-align: center;
@@ -207,7 +210,7 @@ body > .container {
 
 .panel-default > .panel-heading {
   background-color: rgb(87, 87, 87);
-  color: var(--colorText);
+  color: var(--colorWhite);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-left-width: 0;
@@ -369,4 +372,9 @@ a.accordion-toggle {
 .alert-dismissable .close {
   top: -1px;
   right: -5px;
+}
+
+.vizceral .vizceral-notice {
+  background-color: var(--colorPageBackground);
+  border-left: 2px solid var(--colorNormal) ;
 }

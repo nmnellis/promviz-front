@@ -15,7 +15,7 @@ const defaultConfig = {
     type: 'area',
     width: 300,
     height: 400,
-    backgroundColor: '#393939'
+    backgroundColor: '#466bb0'
   },
   title: '',
   xAxis: [{
@@ -24,7 +24,10 @@ const defaultConfig = {
     crosshair: false,
     labels: {
       format: '{value:%m/%d %H:%M:%S}',
-      step: 0
+      step: 0,
+      style: {
+        color: '#ffffff'
+      }
     },
     tickInterval: 60 * 1000 // 1 minute
   }],
@@ -32,7 +35,15 @@ const defaultConfig = {
     title: {
       text: 'count',
       labels: {
-        format: '{value:%.2f}'
+        format: '{value:%.2f}',
+        style: {
+          color: '#ffffff'
+        }
+      }
+    },
+    labels: {
+      style: {
+        color: '#ffffff'
       }
     }
   }],
